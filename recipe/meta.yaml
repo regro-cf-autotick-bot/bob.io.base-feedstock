@@ -1,4 +1,4 @@
-{% set version = "2.0.8" %}
+{% set version = "2.0.9" %}
 
 package:
   name: bob.io.base
@@ -6,11 +6,11 @@ package:
 
 source:
   fn: bob.io.base-{{ version }}.zip
-  url: https://pypi.python.org/packages/source/b/bob.io.base/bob.io.base-{{ version }}.zip
-  md5: f81e1e04466048cb022f4fa363bf6fe0
+  url: https://pypi.io/packages/source/b/bob.io.base/bob.io.base-{{ version }}.zip
+  md5: 73222c746397774d70e989801b719683
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
 
 requirements:
