@@ -1,4 +1,8 @@
 {% set version = "2.0.10" %}
+{% set build_number = "1" %}
+
+{% set hdf5_version = os.environ.get('HDF5_VERSION', '1.8.17|1.8.17.*').replace('"','')|string %}
+{% set build_string = "py{}_hdf5{}_{}".format(environ.get('CONDA_PY', ''), hdf5_version.split('|')[0], build_number) %}
 
 package:
   name: bob.io.base
@@ -10,7 +14,8 @@ source:
   md5: 7cafe4697ce3fb0623c669b98860348b
 
 build:
-  number: 0
+  number: {{ build_number }}
+  string: {{ build_string }}
   skip: true  # [win]
 
 requirements:
@@ -20,7 +25,7 @@ requirements:
   - bob.extension
   - bob.blitz
   - bob.core
-  - hdf5 1.8.17|1.8.17.*
+  - hdf5 {{ hdf5_version }}
   - cmake
   - pkg-config
   - boost 1.61.*
@@ -30,7 +35,7 @@ requirements:
   - bob.extension
   - bob.blitz
   - bob.core
-  - hdf5 1.8.17|1.8.17.*
+  - hdf5 {{ hdf5_version }}
   - boost 1.61.*
 
 test:
