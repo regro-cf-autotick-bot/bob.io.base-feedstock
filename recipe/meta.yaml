@@ -1,5 +1,5 @@
-{% set version = "2.0.10" %}
-{% set build_number = "1" %}
+{% set version = "2.0.11" %}
+{% set build_number = "0" %}
 
 {% set hdf5_version = os.environ.get('HDF5_VERSION', '1.8.17|1.8.17.*').replace('"','')|string %}
 {% set build_string = "py{}_hdf5{}_{}".format(environ.get('CONDA_PY', ''), hdf5_version.split('|')[0], build_number) %}
@@ -11,7 +11,7 @@ package:
 source:
   fn: bob.io.base-{{ version }}.zip
   url: https://pypi.io/packages/source/b/bob.io.base/bob.io.base-{{ version }}.zip
-  md5: 7cafe4697ce3fb0623c669b98860348b
+  md5: e1ed944724ca98f62f51691d0ed29987
 
 build:
   number: {{ build_number }}
@@ -51,7 +51,7 @@ test:
     - nose
 
 about:
-  home: http://github.com/bioidiap/bob.io.base
+  home: https://www.idiap.ch/software/bob/
   license: Modified BSD License (3-clause)
   summary: Basic IO for Bob
 
