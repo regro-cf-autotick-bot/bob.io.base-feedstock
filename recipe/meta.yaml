@@ -1,4 +1,4 @@
-{% set version = "2.0.11" %}
+{% set version = "2.0.12" %}
 {% set build_number = "0" %}
 
 {% set hdf5_version = os.environ.get('HDF5_VERSION', '1.8.17|1.8.17.*').replace('"','')|string %}
@@ -11,7 +11,7 @@ package:
 source:
   fn: bob.io.base-{{ version }}.zip
   url: https://pypi.io/packages/source/b/bob.io.base/bob.io.base-{{ version }}.zip
-  md5: e1ed944724ca98f62f51691d0ed29987
+  md5: 1ad904bf9d5a689638fd978fc912967b
 
 build:
   number: {{ build_number }}
