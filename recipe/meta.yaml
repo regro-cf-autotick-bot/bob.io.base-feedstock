@@ -20,29 +20,30 @@ build:
 
 requirements:
   build:
-  - python
-  - setuptools
-  - bob.extension
-  - bob.blitz
-  - bob.core
-  - hdf5 {{ hdf5_version }}
-  - cmake
-  - pkg-config
-  - boost 1.61.*
+    - python
+    - toolchain
+    - setuptools
+    - bob.extension
+    - bob.blitz
+    - bob.core
+    - hdf5 {{ hdf5_version }}
+    - cmake
+    - pkg-config
+    - boost 1.61.*
 
   run:
-  - python
-  - bob.extension
-  - bob.blitz
-  - bob.core
-  - hdf5 {{ hdf5_version }}
-  - boost 1.61.*
+    - python
+    - bob.extension
+    - bob.blitz
+    - bob.core
+    - hdf5 {{ hdf5_version }}
+    - boost 1.61.*
 
 test:
   imports:
-  - bob
-  - bob.io
-  - bob.io.base
+    - bob
+    - bob.io
+    - bob.io.base
 
   commands:
     - nosetests -sv bob.io.base
@@ -57,4 +58,4 @@ about:
 
 extra:
   recipe-maintainers:
-  - 183amir
+    - 183amir
