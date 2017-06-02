@@ -1,7 +1,7 @@
 {% set version = "2.0.12" %}
-{% set build_number = "0" %}
+{% set build_number = "1" %}
 
-{% set hdf5_version = os.environ.get('HDF5_VERSION', '1.8.17|1.8.17.*').replace('"','')|string %}
+{% set hdf5_version = os.environ.get('HDF5_VERSION', '1.8.18|1.8.18.*').replace('"','')|string %}
 {% set build_string = "py{}_hdf5{}_{}".format(environ.get('CONDA_PY', ''), hdf5_version.split('|')[0], build_number) %}
 
 package:
