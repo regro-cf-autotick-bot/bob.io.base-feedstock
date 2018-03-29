@@ -9,10 +9,8 @@ osx_image: xcode6.4
 env:
   matrix:
     
-    - HDF5_VERSION="1.8.16|1.8.16.*"  CONDA_PY=27
-    - HDF5_VERSION="1.8.17|1.8.17.*"  CONDA_PY=27
-    - HDF5_VERSION="1.8.16|1.8.16.*"  CONDA_PY=35
-    - HDF5_VERSION="1.8.17|1.8.17.*"  CONDA_PY=35
+    - HDF5_VERSION="1.8.16|1.8.16.*"
+    - HDF5_VERSION="1.8.17|1.8.17.*"
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
     - secure: "N7bDkaIngpQvRI5sS+eigUNftDx0kb/Q2wXwvp6If8b1DGggsQyWw7LCImm849AbwRMYrbb3KO43bMLXFLW+sYgzqAexACVmmRv0KI4m/aFHOGoEJsKWBQs8PN9sSZ8vOON8+y/CnzWiM3Uv8CRp1K0jkrbeEEdQsXARh/JYGogHrnBzIvP9yAp2cp/2X8sOxWMxrncYo2ooAvRHAEHVTQr7QsVOOkvYk8hI3M5trDTstfRFGRBpttazAcnOBUKGwuaDd3uU262BIasucXxQnk8xwoiMvFn/sjfZyGTKk6ma2LTVAtKeveyVg4etr6f47jZojSMUgKgLTSBBM6mD6sHcLzY3vIBarH6yU2Zni7Df36vxd0U2PosA+itetOYvi2f9W3db3eAhH6poeclR8zdBuh+ABhgnYLolYRPWDF8tv3R6AJgelEZzbkjFOzM9eSrE0U5kCCaflYJDmAIXbZilD751iPKu4fPkWgaQe4+Ll4HtmrFsKnK8vkpIQpH/wCEBdjtHefhO5t4v4JDBG8Vy7O/oAedSiD/v7WIFFapOE4+8asi+zgkHMJ6bNDVovpaAdcPtcvQuaan8lVGy0dDQ1OpnS+dyHgiI41FTC7O/LtP02KuGAxCsN8rJtYyEGgWIGqCkT40N9Oo74YGc8YapD3NrbmXPuTLdsjPj9m8="
