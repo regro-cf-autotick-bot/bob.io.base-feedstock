@@ -1,5 +1,5 @@
-{% set version = "2.0.12" %}
-{% set build_number = "1" %}
+{% set version = "3.0.6" %}
+{% set build_number = 0 %}
 
 {% set hdf5_version = os.environ.get('HDF5_VERSION', '1.8.18|1.8.18.*').replace('"','')|string %}
 {% set build_string = "py{}_hdf5{}_{}".format(environ.get('CONDA_PY', ''), hdf5_version.split('|')[0], build_number) %}
@@ -11,7 +11,7 @@ package:
 source:
   fn: bob.io.base-{{ version }}.zip
   url: https://pypi.io/packages/source/b/bob.io.base/bob.io.base-{{ version }}.zip
-  md5: 1ad904bf9d5a689638fd978fc912967b
+  md5: 8cb75f70b92b9178156c034adf547af3
 
 build:
   number: {{ build_number }}
